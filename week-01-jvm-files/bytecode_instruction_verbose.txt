@@ -1,0 +1,166 @@
+Classfile geekbang-advanced-java/week-01-jvm-files/Hello.class
+  Last modified Apr 25, 2021; size 887 bytes
+  MD5 checksum 066e4f8e1e668c4e0f0be6a33a040b09
+  Compiled from "Hello.java"
+public class demo.tasks.bytecode.analysis.Hello
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #7                          // demo/tasks/bytecode/analysis/Hello
+  super_class: #8                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 1
+Constant pool:
+   #1 = Methodref          #8.#45         // java/lang/Object."<init>":()V
+   #2 = Long               6l
+   #4 = Float              7.0f
+   #5 = Double             8.0d
+   #7 = Class              #46            // demo/tasks/bytecode/analysis/Hello
+   #8 = Class              #47            // java/lang/Object
+   #9 = Utf8               <init>
+  #10 = Utf8               ()V
+  #11 = Utf8               Code
+  #12 = Utf8               LineNumberTable
+  #13 = Utf8               LocalVariableTable
+  #14 = Utf8               this
+  #15 = Utf8               Ldemo/tasks/bytecode/analysis/Hello;
+  #16 = Utf8               main
+  #17 = Utf8               ([Ljava/lang/String;)V
+  #18 = Utf8               i
+  #19 = Utf8               I
+  #20 = Utf8               args
+  #21 = Utf8               [Ljava/lang/String;
+  #22 = Utf8               boolean1
+  #23 = Utf8               Z
+  #24 = Utf8               byte2
+  #25 = Utf8               B
+  #26 = Utf8               char3
+  #27 = Utf8               C
+  #28 = Utf8               short4
+  #29 = Utf8               S
+  #30 = Utf8               int5
+  #31 = Utf8               long6
+  #32 = Utf8               J
+  #33 = Utf8               float7
+  #34 = Utf8               F
+  #35 = Utf8               double8
+  #36 = Utf8               D
+  #37 = Utf8               add
+  #38 = Utf8               sub
+  #39 = Utf8               mul
+  #40 = Utf8               div
+  #41 = Utf8               StackMapTable
+  #42 = Class              #21            // "[Ljava/lang/String;"
+  #43 = Utf8               SourceFile
+  #44 = Utf8               Hello.java
+  #45 = NameAndType        #9:#10         // "<init>":()V
+  #46 = Utf8               demo/tasks/bytecode/analysis/Hello
+  #47 = Utf8               java/lang/Object
+{
+  public demo.tasks.bytecode.analysis.Hello();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Ldemo/tasks/bytecode/analysis/Hello;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=15, args_size=1
+         0: iconst_1
+         1: istore_1
+         2: iconst_2
+         3: istore_2
+         4: iconst_3
+         5: istore_3
+         6: iconst_4
+         7: istore        4
+         9: iconst_5
+        10: istore        5
+        12: ldc2_w        #2                  // long 6l
+        15: lstore        6
+        17: ldc           #4                  // float 7.0f
+        19: fstore        8
+        21: ldc2_w        #5                  // double 8.0d
+        24: dstore        9
+        26: iload_1
+        27: ifeq          32
+        30: iconst_0
+        31: istore_1
+        32: iconst_0
+        33: istore        11
+        35: iload         11
+        37: bipush        10
+        39: if_icmpge     48
+        42: iinc          11, 1
+        45: goto          35
+        48: iload         5
+        50: iload         4
+        52: iadd
+        53: istore        11
+        55: iload         5
+        57: iload         4
+        59: isub
+        60: istore        12
+        62: iload         5
+        64: iload         4
+        66: imul
+        67: istore        13
+        69: iload         5
+        71: iload         4
+        73: idiv
+        74: istore        14
+        76: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 2
+        line 9: 4
+        line 10: 6
+        line 11: 9
+        line 12: 12
+        line 13: 17
+        line 14: 21
+        line 17: 26
+        line 18: 30
+        line 21: 32
+        line 24: 48
+        line 25: 55
+        line 26: 62
+        line 27: 69
+        line 28: 76
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           35      13    11     i   I
+            0      77     0  args   [Ljava/lang/String;
+            2      75     1 boolean1   Z
+            4      73     2 byte2   B
+            6      71     3 char3   C
+            9      68     4 short4   S
+           12      65     5  int5   I
+           17      60     6 long6   J
+           21      56     8 float7   F
+           26      51     9 double8   D
+           55      22    11   add   I
+           62      15    12   sub   I
+           69       8    13   mul   I
+           76       1    14   div   I
+      StackMapTable: number_of_entries = 3
+        frame_type = 255 /* full_frame */
+          offset_delta = 32
+          locals = [ class "[Ljava/lang/String;", int, int, int, int, int, long, float, double ]
+          stack = []
+        frame_type = 252 /* append */
+          offset_delta = 2
+          locals = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 12
+}
+SourceFile: "Hello.java"

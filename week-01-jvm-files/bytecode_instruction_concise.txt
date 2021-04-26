@@ -1,0 +1,55 @@
+Compiled from "Hello.java"
+public class demo.tasks.bytecode.analysis.Hello {
+  public demo.tasks.bytecode.analysis.Hello();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: iconst_1
+       1: istore_1
+       2: iconst_2
+       3: istore_2
+       4: iconst_3
+       5: istore_3
+       6: iconst_4
+       7: istore        4
+       9: iconst_5
+      10: istore        5
+      12: ldc2_w        #2                  // long 6l
+      15: lstore        6
+      17: ldc           #4                  // float 7.0f
+      19: fstore        8
+      21: ldc2_w        #5                  // double 8.0d
+      24: dstore        9
+      26: iload_1
+      27: ifeq          32
+      30: iconst_0
+      31: istore_1
+      32: iconst_0
+      33: istore        11
+      35: iload         11
+      37: bipush        10
+      39: if_icmpge     48
+      42: iinc          11, 1
+      45: goto          35
+      48: iload         5
+      50: iload         4
+      52: iadd
+      53: istore        11
+      55: iload         5
+      57: iload         4
+      59: isub
+      60: istore        12
+      62: iload         5
+      64: iload         4
+      66: imul
+      67: istore        13
+      69: iload         5
+      71: iload         4
+      73: idiv
+      74: istore        14
+      76: return
+}
